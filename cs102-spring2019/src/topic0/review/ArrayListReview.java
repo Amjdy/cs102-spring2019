@@ -1,6 +1,7 @@
 package topic0.review;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 
 public class ArrayListReview {
@@ -69,10 +70,24 @@ public class ArrayListReview {
        System.out.println("strList.contain(DEC): "+ strList.contains("DEC"));
        System.out.println("strList.contain(JAN): "+ strList.contains("JAN"));
     
-        System.out.println("strList.indexOf(DEC)"+ strList.indexOf("DEC"));
+       System.out.println("strList.indexOf(DEC)"+ strList.indexOf("DEC"));
         
+       HashSet<Integer> intSet = new HashSet<Integer>(); 
+        System.out.println("intSet size: "+ intSet.size());
         
+        intSet.add(4);
+        intSet.add(6);
+        intSet.add(2);
+        intSet.add(4);
+        intSet.add(5);
+        intSet.add(4);
+        
+        System.out.println("intSet: "+ intSet);
     
+         System.out.println("intList: "+ intList);
+         intSet = new HashSet<Integer>(intList); 
+         System.out.println("intList after conversion to Set: "+ intSet);
+        
     }
     
     
