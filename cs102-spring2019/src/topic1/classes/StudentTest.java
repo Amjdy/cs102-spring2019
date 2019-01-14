@@ -5,7 +5,7 @@ package topic1.classes;
 public class StudentTest {
     
      public static void main(String []args){
-    
+     
          //create my three students
          Student student1 = new Student("Mohamed", "Ali",23,"0589873484");//the constructor  
          Student student2 = new Student("Mounir","Kamal",25,"0584345484");//the DEFAULT constructor
