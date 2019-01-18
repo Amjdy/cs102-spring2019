@@ -8,6 +8,9 @@ public class Student {
     private int age;   
     private String mobilePhone;
     
+    private Date birthDate; 
+    
+    private static int count =0;
     
     //constructor: it allows to assign values to attributes at creation time
     //1- it has the same name of the class
@@ -23,20 +26,51 @@ public class Student {
         setAge(a);
         //mobilePhone=mp;
         setMobilePhone(mp);
-    }
-    
-    
-    
-    //default constructor
-    public Student(){
+        
+        count = count +1;
         
     }
+    
+    public Student(String fn, String ln, int a,String mp, Date birthDate){
+        //firstName=fn;
+        setFirstName(fn);
+        //lastName = ln;
+        setLastName(ln);
+        //age = a;
+        setAge(a);
+        //mobilePhone=mp;
+        setMobilePhone(mp);
+        
+        setBirthDate(birthDate);
+        
+        count = count +1;
+        
+    }
+    
+    public Student(){
+        count = count + 1;
+    }
+    
+    public static int getCount(){
+        return count;
+    }
+    
+    
+    public Date getBirthDate(){
+        return birthDate;
+    }
+    
+    public void setBirthDate(Date d){
+        birthDate = d;
+    }
+    
+    
     
     //operations: methods
     public void printInfo(){
         System.out.println("Student Info");
-        System.out.printf("Student %s %s is %d years old. his mobile phone is %s\n",
-                firstName, lastName, age, mobilePhone);
+        System.out.printf("Student %s %s is %d years old. his mobile phone is %s. \nHe is born on %s\n",
+                firstName, lastName, age, mobilePhone, birthDate);
     }
     
     
@@ -79,6 +113,11 @@ public class Student {
             mobilePhone = mp;
         else
             throw new IllegalArgumentException("wrong phone format");
+    }
+    
+    @Override
+    public String toString(){
+        return String.format("%s %s: age= %d", firstName, lastName, age);
     }
     
     
