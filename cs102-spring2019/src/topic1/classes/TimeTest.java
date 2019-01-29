@@ -14,7 +14,7 @@ public class TimeTest {
         
         
         Time t4 = new Time(t1);
-        
+        //Time t4 =t1;
         System.out.println("t4: "+ t4.toUniversalString());
         
         System.out.println("t1==t4: "+ (t1==t4));
