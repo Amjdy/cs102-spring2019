@@ -18,6 +18,7 @@ public class Square extends TwoDShape{
     }
     
     //implementation of getArea() for the class Square
+    @Override
     public double getArea(){
         return getSide()*getSide();
     }

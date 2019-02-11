@@ -7,6 +7,10 @@ public class Polymorphism {
     
     public static void main(String []args){
         
+        
+        
+        
+        
         ArrayList<Shape> shapes = new ArrayList<Shape>();
         
         shapes.add(new Circle("C1", 3.4));
@@ -18,6 +22,8 @@ public class Polymorphism {
         
         shapes.add(new Square("S1", 3.4));
         shapes.add(new Square("S2", 6.4));
+        
+        
         
         //print the radius of the circle
         

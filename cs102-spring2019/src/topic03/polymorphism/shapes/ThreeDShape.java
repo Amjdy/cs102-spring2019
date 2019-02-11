@@ -2,7 +2,7 @@
 package topic03.polymorphism.shapes;
 
 
-public class ThreeDShape extends Shape{
+public abstract class ThreeDShape extends Shape{
     
     private double x;
     private double y;
@@ -43,4 +43,7 @@ public class ThreeDShape extends Shape{
     public double getZ(){
         return z;
     }
+    
+    
+    public abstract double getVolume();
 }

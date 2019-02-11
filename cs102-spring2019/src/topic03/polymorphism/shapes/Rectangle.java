@@ -24,7 +24,7 @@ public class Rectangle extends TwoDShape{
         setY(width);
     }
     
-    
+    @Override
     public double getArea(){
         return this.getLength()*this.getWidth();
     }

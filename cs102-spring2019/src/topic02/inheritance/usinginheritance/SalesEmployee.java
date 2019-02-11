@@ -38,6 +38,7 @@ public class SalesEmployee extends Employee{
             throw new IllegalArgumentException("Commission must in in the interval [0.0, 1.0]");
     }
     
+    @Override
     public double totalSalary(){
         return commission*sales;//0.1 * 1000 = 100
     }

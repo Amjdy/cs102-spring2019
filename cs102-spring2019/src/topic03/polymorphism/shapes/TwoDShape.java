@@ -1,7 +1,7 @@
 package topic03.polymorphism.shapes;
 
 
-public class TwoDShape extends Shape {
+public abstract class TwoDShape extends Shape {
     
     private double x;
     private double y;
@@ -30,7 +30,12 @@ public class TwoDShape extends Shape {
     
     public double getY(){
         return y;
-    }   
+    }  
+    
+    //abstract method
+    public abstract double getArea();
+    
+    
     
    
 }

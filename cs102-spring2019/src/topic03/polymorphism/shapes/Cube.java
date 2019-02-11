@@ -16,6 +16,12 @@ public class Cube extends ThreeDShape{
         setX(side);
     }
     
+    @Override
+    public double getVolume(){
+        return getSide()*getSide()*getSide();
+    }
+    
+    @Override
     public double getArea(){
         return getSide()*getSide();
     }

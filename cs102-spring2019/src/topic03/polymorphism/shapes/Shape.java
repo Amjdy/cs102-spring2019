@@ -1,7 +1,7 @@
 package topic03.polymorphism.shapes;
 
 
-public class Shape {
+public abstract class Shape {
     
     private String name;
     
@@ -17,6 +17,9 @@ public class Shape {
     public String getName(){
         return name;
     }
+    
+    //abstract method
+    public abstract double getArea();
     
     @Override
     public String toString() {

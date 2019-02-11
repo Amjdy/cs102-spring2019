@@ -1,7 +1,7 @@
 package topic02.inheritance.usinginheritance;
 
 
-public class Employee {
+public abstract class Employee {
     
     private String firstName;
     private String lastName;
@@ -38,7 +38,7 @@ public class Employee {
         id=ID;
     }
     
-    
+    public abstract double totalSalary();
     
     
     public String toString(){
