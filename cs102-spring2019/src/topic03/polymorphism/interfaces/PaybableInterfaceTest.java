@@ -15,21 +15,25 @@ public class PaybableInterfaceTest {
         ArrayList<Payable> payables = new ArrayList<Payable>();
         
         //create the objects with concrete classes
-        //payableObjects[0]= new Invoice ("01234", "seat", 2, 375.00);
-        //payableObjects[1]= new Invoice ("56789", "tire", 4, 85.00);
-        //payableObjects[2]= new SalariedEmployee ("Mohamed", "Ali", "111-11-1111", 100.00);
-        //payableObjects[3]= new SalariedEmployee ("Ahmed", "Saleh", "222-13-1141", 200.00);
+        Invoice invoice01 = new Invoice ("01234", "seat", 2, 375.00);
+        payableObjects[0]= invoice01;
+        payableObjects[1]= new Invoice ("56789", "tire", 4, 85.00);
+        payableObjects[2]= new SalariedEmployee ("Mohamed", "Ali", "111-11-1111", 100.00);
+        payableObjects[3]= new SalariedEmployee ("Ahmed", "Saleh", "222-13-1141", 200.00);
         
         
+        payables.add(new Invoice ("01234", "seat", 2, 375.00));
+        payables.add(new SalariedEmployee ("Mohamed", "Ali", "111-11-1111", 100.00));
         
-        ArrayList<Invoice> invoices = new ArrayList<Invoice>();
-        invoices.add(new Invoice ("01234", "seat", 2, 375.00));
-        invoices.add(new Invoice ("56789", "tire", 4, 85.00));
-        invoices.add(new Invoice ("2738", "phone", 7, 1885.00));
-        invoices.add(new Invoice ("45354", "tablet", 5, 895.00));
-        
-        System.out.println("invoices: "+ invoices);
-        
+        for (int i=0;i<payableObjects.length;i++){
+            System.out.printf("payment : %.2f\n", payableObjects[i].getPayment());
+            payableObjects[i].print();
+            if (payableObjects[i] instanceof Employee){
+                System.out.println(((Employee)payableObjects[i]).getFirstName());
+
+            }
+            
+        }
         
         
         

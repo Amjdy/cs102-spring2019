@@ -44,5 +44,6 @@ public class TestClass {
         ArrayList<DistanceSensor> distanceSensors =new ArrayList<DistanceSensor>(Arrays.asList( 
                 new DistanceSensor(1.0, 0.3, 5.0, "D12345", "Sharp", "SD01"),
                 new DistanceSensor(3.0, 0.1, 10.0, "D12346", "Sharp", "SD02")));
+       
     }
 }

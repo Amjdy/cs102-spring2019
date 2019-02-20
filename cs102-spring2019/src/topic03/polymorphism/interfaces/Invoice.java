@@ -1,7 +1,7 @@
 
 package topic03.polymorphism.interfaces;
 
-public class Invoice implements Payable  {
+public class Invoice implements Payable, Printable  {
    
    private String partNumber; 
    private String partDescription;
@@ -88,6 +88,7 @@ public double totalPrice(){
     return this.getQuantity()*this.getPricePerItem();
 }
 
+    @Override
     public double getPayment(){
         return totalPrice();
     }

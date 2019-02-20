@@ -3,7 +3,7 @@ package topic03.polymorphism.interfaces;
 
 
 
-public abstract class Employee implements Payable{
+public abstract class Employee implements Payable, Printable{
     
     private String firstName;
     private String lastName;

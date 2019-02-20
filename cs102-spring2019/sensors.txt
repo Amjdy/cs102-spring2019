@@ -1,0 +1,6 @@
+A1234;aq1;Arduino;123.22;ppm
+A1235;aq2;Arduino;13.92;ppm
+D5478;ds1;Sharp;2.33;0.2;5.0;m
+A1236;aq3;Arduino;12.29;ppm
+D5473;ds2;Sharp;5.74;0.3;6.0;m
+A1237;aq4;Arduino;1.05;ppm

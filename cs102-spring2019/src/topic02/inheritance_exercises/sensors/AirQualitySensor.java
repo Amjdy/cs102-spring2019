@@ -23,7 +23,7 @@ public class AirQualitySensor extends Sensor{
     public void setId(String id) {
         if(this instanceof GazSensor)
             super.setId(id);
-        if(id.startsWith("A")&&id.length()==6&&id.substring(1).matches("[0-9]+"))
+        else if(id.startsWith("A")&&id.length()==6&&id.substring(1).matches("[0-9]+"))
         super.setId(id); 
         else throw new IllegalArgumentException("wrong id");
     }
