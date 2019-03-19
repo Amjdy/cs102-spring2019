@@ -1,4 +1,4 @@
-package topic05.designpatterns_exercises.interfaces;
+package topic05.designpatterns_exercises.images.interfaces;
 
 public interface Image extends Comparable <Image>{
     

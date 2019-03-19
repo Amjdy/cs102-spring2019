@@ -1,7 +1,7 @@
-package topic05.designpatterns_exercises.core;
+package topic05.designpatterns_exercises.images.core;
 
 
-import topic05.designpatterns_exercises.interfaces.*;
+import topic05.designpatterns_exercises.images.interfaces.*;
 
 public class RGBPixelImpl implements Pixel{
     

@@ -1,10 +1,15 @@
-package topic03.polymorphism_exercises.images.interfaces;
+ package topic03.polymorphism_exercises.images.interfaces;
+
 
 public interface RGBColor extends Color{
-    void setRed(byte color);
-    byte getRed();
-    void setBlue(byte color);
-    byte getBlue();
-    void setGreen(byte color);
-    byte getGreen();
+    
+    public abstract byte getRed();
+    public abstract void setRed(byte red);
+    
+    public abstract byte getGreen();
+    public abstract void setGreen(byte color);
+    
+    public abstract byte getBlue();
+    public abstract void setBlue(byte blue);
+    
 }

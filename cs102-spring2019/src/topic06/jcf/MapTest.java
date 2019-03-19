@@ -15,43 +15,41 @@ public class MapTest {
     
     public static void main(String []args){
         
+        
         Map<String, Double> studentGradesMap = new HashMap<String, Double>();
         
-        studentGradesMap.put("ST123", 3.26);
-        studentGradesMap.put("ST124", 2.24);
-        studentGradesMap.put("ST125", 3.27);
-        studentGradesMap.put("ST126", 3.12);
+        studentGradesMap.put("ST123", 3.67);
+        studentGradesMap.put("ST124", 3.43);
+        studentGradesMap.put("ST125", 3.14);
+        studentGradesMap.put("ST126", 3.76);
         
-        System.out.println(studentGradesMap);
         
         System.out.println(studentGradesMap.size());
         
+        System.out.println(studentGradesMap);
         
         studentGradesMap.remove("ST124");
         
         System.out.println(studentGradesMap);
         
-        System.out.println(studentGradesMap.get("ST125"));
         
-        //iteration?
+        System.out.println(studentGradesMap.get("ST123"));
+        
+        //iteration
+        
         Set<String> keySet = studentGradesMap.keySet();
         
-        for (String s : keySet){
-            System.out.println(s+" "+ studentGradesMap.get(s));
+        for (String s : studentGradesMap.keySet()){
+            System.out.printf("%s %.2f\n", s, studentGradesMap.get(s));
         }
-        System.out.println("---------------------------");
-        //using an iterator
-        keySet = studentGradesMap.keySet();
         
-        Iterator<String> it = keySet.iterator();
-        
-        while(it.hasNext()){
+        System.out.println("------------------------------");
+        //iterator 
+        Iterator<String> it = studentGradesMap.keySet().iterator();
+        while (it.hasNext()){
             String s = it.next();
-            System.out.println(s + " " + studentGradesMap.get(s));
+            System.out.printf("%s %.2f\n", s, studentGradesMap.get(s));
         }
-        
-        
-        
-    }
     
+    }
 }

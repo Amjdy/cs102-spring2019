@@ -1,13 +1,17 @@
-package topic03.polymorphism_exercises.images.interfaces;
+ package topic03.polymorphism_exercises.images.interfaces;
 
-public interface Image extends Comparable<Image>{
-    void setWidth(int width);
-    int getWidth();
-    void setHeight(int height);
-    int getHeight();
-    void setName(String name);
-    String getName();
-    Pixel[][] getImg();
-    void randomize();
+public interface Image extends Comparable <Image>{
     
+    public abstract void setWidth(int width);
+    public abstract int getWidth();
+    
+    public abstract void setHeight(int height);
+    public abstract int getHeight();
+    
+    public abstract void setName(String name);
+    public abstract String getName();
+    
+    public abstract Pixel [][] getImg();
+       
+    public abstract void randomize();
 }

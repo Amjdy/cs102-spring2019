@@ -1,9 +1,11 @@
-package topic05.designpatterns_exercises.core;
+package topic05.designpatterns_exercises.images.core;
 
 
+import topic05.designpatterns_exercises.images.interfaces.Image;
+import topic05.designpatterns_exercises.images.interfaces.RGBImage;
+import topic05.designpatterns_exercises.images.interfaces.GrayImage;
 import java.util.ArrayList;
 import java.util.Collections;
-import topic05.designpatterns_exercises.interfaces.*;
 
 public class ImageTest {
     

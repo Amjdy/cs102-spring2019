@@ -1,9 +1,9 @@
-package topic03.polymorphism_exercises.images.interfaces;
+ package topic03.polymorphism_exercises.images.interfaces;
+
 
 public interface GrayColor extends Color{
-    
-    void setColor(byte color);
-    byte getColor();
-    
+
+    public abstract byte getColor();
+    public abstract void setColor(byte color);
     
 }

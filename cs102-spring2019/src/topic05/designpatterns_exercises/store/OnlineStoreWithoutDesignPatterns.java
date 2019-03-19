@@ -4,7 +4,7 @@ public class OnlineStoreWithoutDesignPatterns {
     
     public static void main(String [] args){
         
-        Store store = new Store();
+        //Store store = new Store();
         
         BookProduct [] books = new BookProduct [2];
         MobilePhoneProduct [] phones = new MobilePhoneProduct [2];
