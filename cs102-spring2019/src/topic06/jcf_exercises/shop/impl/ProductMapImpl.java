@@ -14,6 +14,7 @@ import topic06.jcf_exercises.shop.interfaces.ProductMap;
 public class ProductMapImpl <T extends Product > implements ProductMap<T> {
     
     private Map<String, T> productMaps = new TreeMap<String, T>();
+    
     @Override
     public void add(String id, T t) {
         productMaps.put(id, t);

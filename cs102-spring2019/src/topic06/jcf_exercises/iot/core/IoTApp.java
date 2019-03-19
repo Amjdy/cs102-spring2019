@@ -116,7 +116,21 @@ public class IoTApp {
    
     
     
-    
+    public double maxTemperature (String cityName, Date dmin, Date dmax){
+        Set<Measurement> mSet = new HashSet<Measurement>();
+        mSet = FilterByDateAndCity(cityName, dmin, dmax);
+
+        double ht = -9999;
+        Measurement m = Collections.max(mSet, new MeasurementTemperatureComparator());
+        for (Sensor s : m.getSensors()){
+            if (s instanceof Temperature){
+                ht=s.getValue();
+            break;
+            }
+        }
+        if (ht==-9999) throw new IllegalArgumentException("No temperature found in m1");
+        return ht;
+    }
     
     
     
