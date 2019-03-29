@@ -6,12 +6,15 @@
 package topic06.jcf_exercises.iot.core;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import topic06.jcf_exercises.iot.interfaces.Database;
+import topic06.jcf_exercises.iot.interfaces.Measurement;
 
 
 
 public class IoTTest {
        public static void main(String []args) throws FileNotFoundException{
-           
+
            IoTApp app = new IoTApp();
            
            Date d = new Date(2,1,2018);
@@ -26,10 +29,7 @@ public class IoTTest {
            System.out.println(app.maxTemperature ("all", new Date(1,1,2018), new Date(10,1,2018)));
             System.out.println(app.maxTemperature ("riyadh", new Date(1,1,2018), new Date(10,1,2018)));
             System.out.println(app.maxTemperature ("jeddah", new Date(1,1,2018), new Date(10,1,2018)));
-       
-          
-            
-       
+
        }
        
 }

@@ -16,6 +16,7 @@ import topic06.jcf_exercises.iot.interfaces.SensorFactory;
 import topic06.jcf_exercises.iot.interfaces.Temperature;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -33,7 +34,7 @@ public class IoTApp {
     SensorFactory sf = new SensorFactoryImpl();
     Set<String> cities = new TreeSet<String>();
     
-     /*** Task 1: loadData Method **/
+    /*** Task 1: loadData Method **/
     public void loadData(String filename){
         File file = new File(filename);
         try {

@@ -31,7 +31,14 @@ public class CountryImpl implements Country {
     /** TASK 1: create the method delete(String cn) **********/
     @Override
     public void delete(String cn) {
-        //complete this method
+        Iterator<Addressable> it = cities.values().iterator();
+        while(it.hasNext()){
+            Addressable a = it.next();
+            City c = (City) a;
+            if (c.getName().equalsIgnoreCase(cn)){
+                it.remove();
+            }
+        }
     }
     /********************************************************/
     

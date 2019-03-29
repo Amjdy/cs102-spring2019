@@ -16,19 +16,21 @@ import java.util.List;
 import java.util.Set;
 
 /** TASK 2: make TourImpl as comparable **********/
-public class TourImpl implements Tour{
+public class TourImpl implements Tour, Comparable<Tour>{
     
     private List<Addressable> route = new ArrayList<Addressable>();
 
     
     /** TASK 2: make TourImpl as comparable **********/
+   
     
 
     /** TASK 4: write the method  setTourWithNoDuplicates(cities) **********/
+
+
     
-    
-    /** TASK 5: write the method  isValid(Country country) for tour validity **********/ 
-   
+    /** TASK 5: write the method  isValid(Country country) for tour validity **********/
+
     
     public TourImpl() {
     }
@@ -101,13 +103,43 @@ public class TourImpl implements Tour{
     public Coordinate getDestinationLocation() {
         return getRoute().get(route.size()-1).getLocation();
     } 
-    
-    
-    
 
-    
+    @Override
+    public int compareTo(Tour t) {
+        if (this.getLength()<t.getLength()){
+            return 1;
+        }
+        else if (this.getLength()>t.getLength())
+            return -1;
+        return 0;
 
+
+    }
     
-    
+    public void setTourWithNoDuplicates(Collection<Addressable> c){
+        Set<Addressable> set = new HashSet<Addressable>(this.getRoute());
+        List<Addressable> list = new ArrayList<Addressable>(set);
+        setRoute((ArrayList<Addressable>) list);
+        
+        
+    }
+    public boolean isValid(){
+        City start_city = (City) this.getRoute().get(0);
+        City destination_city = (City) this.getRoute().get(this.getRoute().size()-1);
+        if (!start_city.getName().equalsIgnoreCase(destination_city.getName()))
+            return false;
+        else{
+            List<Addressable> list1 = this.getRoute();
+            list1.remove(list1.size()-1);
+            Set<Addressable> set1 = new HashSet<Addressable>(list1);
+            if (list1.size() != set1.size())
+                return false;
+            else return true;
+        }
+        
+    }
+
+
+
     
 }
